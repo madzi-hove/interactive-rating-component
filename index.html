@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Frontend Mentor | Interactive rating component</title>
+  <title>Frontend Mentor | Interactive rating rating</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
@@ -20,14 +20,15 @@
 
   <main class="wrapper">
     <!-- Rating state start -->
-    <section class="component">
-      <img class="component__image" src="images/icon-star.svg" alt="star">
-      <h1 class="component__header">How did we do?</h1>
-      <p class="component__text">
+    <section class="rating">
+      <div class="rating__image-container"><img class="rating__image" src="images/icon-star.svg" alt="star">
+      </div>
+      <h1 class="rating__heading">How did we do?</h1>
+      <p class="rating__text">
         Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!
       </p>
-      <form action="" class="component-form">
+      <form action="" class="rating-form">
         <ul class="list">
           <li class="list__item"><input type="radio" name="rating" value="1" id="one"><label for="one">1</label></li>
           <li class="list__item"><input type="radio" name="rating" value="2" id="two"><label for="two">2</label></li>
@@ -42,7 +43,9 @@
     <!-- Rating state end -->
     <!-- Thank you state start -->
     <section class="thank-you thank-you--hidden">
-      You selected <!-- Add rating here --> out of 5
+      <div class="thank-you__image-container"><img src="images/illustration-thank-you.svg" alt=""
+          class="thank-you__image"></div>
+      <p class="thank-you__text">You selected <span class="rating"></span> out of 5</p>
       <h1 class="thank-you__header">Thank you!</h1>
       <p class="thank-you__text">
         We appreciate you taking the time to give a rating. If you ever need more support,
