@@ -1,3 +1,5 @@
+/* General styles */
+
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
 :root {
@@ -10,19 +12,76 @@
 	font-size: 10px;
 }
 
+html {
+	block-size: 100%;
+}
+
 body {
 	display: grid;
+	grid-auto-flow: row;
+	grid-template:
+		". . ." 1fr
+		". main ." 400px
+		". footer ." 1fr;
 	background-color: var(--very-dark-blue);
+	block-size: 100%;
+	font-size: 1.5rem;
 }
 
 /* General component styles */
+main {
+	box-sizing: content-box;
+	grid-area: main;
+	color: var(--light-grey);
+	background-color: var(--dark-blue);
+	max-inline-size: 400px;
+	inline-size: 90%;
+	justify-self: center;
+	border-radius: 15px;
+}
+
+.thank-you--hidden {
+	display: none;
+}
 
 /* content styles */
 
 /* form styles */
+.list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: space-around;
+	border: 1px solid blue;
+}
+
+.list__item {
+	list-style-type: none;
+	inline-size: 5rem;
+	block-size: 5rem;
+	text-align: center;
+	background-color: var(--medium-grey);
+	border-radius: 50%;
+	border: 1px solid red;
+}
+
+[type="radio"] {
+	opacity: 0;
+	margin: 2rem 0;
+}
+
+label {
+	/* vertical-align: middle; */
+	margin-right: 1.3rem;
+}
 
 /* button styles */
 
+/* footer styles */
+
+footer {
+	grid-area: footer;
+}
 .attribution {
 	font-size: 1.1rem;
 	text-align: center;
