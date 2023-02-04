@@ -89,6 +89,10 @@ main {
 	border-radius: 50%;
 }
 
+.list__item--checked {
+	background-color: var(--orange);
+}
+
 [type="radio"] {
 	opacity: 0;
 	margin: 2rem 0;
