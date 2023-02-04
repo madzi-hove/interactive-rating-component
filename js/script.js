@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("[type='radio']");
+const ratingContainer = document.querySelector(".form__ratings");
 let notChecked = true;
 console.log(inputs);
 
@@ -19,6 +20,14 @@ function checkForInput(inputs) {
 	});
 }
 
+// Add class to radio button container to show message
+function invalidMessage() {
+	ratingContainer.classList.add("invalid");
+	setTimeout(() => {
+		ratingContainer.classList.remove("invalid");
+	}, 1000);
+}
+
 // Add event listener to form and use bubbling to caputre event
 form.addEventListener("click", (e) => {
 	if (e.target.type === "radio") {
@@ -29,7 +38,10 @@ form.addEventListener("click", (e) => {
 	if (e.target.type === "submit") {
 		const inputsArray = [...inputs];
 		notChecked = checkForInput(inputsArray);
-		if (notChecked === true) e.preventDefault();
+		if (notChecked === true) {
+			e.preventDefault();
+			invalidMessage();
+		}
 	}
 });
 
