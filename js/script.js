@@ -1,7 +1,11 @@
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("[type='radio']");
 const ratingContainer = document.querySelector(".form__ratings");
+const ratingSection = document.querySelector(".rating");
+const thankYouSection = document.querySelector(".thank-you");
+const rating = document.querySelector(".rating-value");
 let notChecked = true;
+let formdata;
 console.log(inputs);
 
 // Removes active state class
@@ -33,6 +37,7 @@ form.addEventListener("click", (e) => {
 	if (e.target.type === "radio") {
 		removeActiveState();
 		e.target.parentNode.classList.add("rating--checked");
+		formData = new FormData(form);
 	}
 
 	if (e.target.type === "submit") {
@@ -45,6 +50,10 @@ form.addEventListener("click", (e) => {
 	}
 });
 
-form.addEventListener("submit", () => {
-	console.log("submitted");
+form.addEventListener("submit", (e) => {
+	ratingSection.classList.add("rating--hidden");
+	thankYouSection.classList.remove("thank-you--hidden");
+	rating.innerText = formData.get("rating");
+	e.preventDefault();
+	console.log(Number(formData.get("rating")));
 });
