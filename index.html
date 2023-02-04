@@ -12,7 +12,7 @@
 
   <title>Frontend Mentor | Interactive rating rating</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script defer src="js/script.js"></script>
 
 </head>
 
@@ -29,14 +29,22 @@
         to help us improve our offering!
       </p>
       <form action="" class="rating-form">
-        <ul class="list">
-          <li class="list__item"><input type="radio" name="rating" value="1" id="one"><label for="one">1</label></li>
-          <li class="list__item"><input type="radio" name="rating" value="2" id="two"><label for="two">2</label></li>
-          <li class="list__item"><input type="radio" name="rating" value="3" id="three"><label for="three">3</label>
-          </li>
-          <li class="list__item"><input type="radio" name="rating" value="4" id="four"><label for="four">4</label></li>
-          <li class="list__item"><input type="radio" name="rating" value="5" id="five"><label for="five">5</label></li>
-        </ul>
+        <div class="buttons">
+
+          <label for="one"><input type="radio" name="rating" value="1" id="one">1</label>
+
+
+          <label for="two"><input type="radio" name="rating" value="2" id="two">2</label>
+
+
+          <label for="three"><input type="radio" name="rating" value="3" id="three">3</label>
+
+
+          <label for="four"><input type="radio" name="rating" value="4" id="four">4</label>
+
+
+          <label for="five"><input type="radio" name="rating" value="5" id="five"> 5</label>
+        </div>
         <button type="submit" class="form__btn">Submit</button>
       </form>
     </section>
