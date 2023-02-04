@@ -134,6 +134,15 @@ button {
 	border-radius: 20px;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
+button:active {
+	color: var(--orange);
+	background-color: var(--white);
+}
+
 /* thank you card component */
 
 .thank-you--hidden {
@@ -150,6 +159,7 @@ button {
 }
 
 section div + p {
+	color: var(--orange);
 	width: 60%;
 	margin: 2rem auto;
 	padding: 0.5rem 0;
