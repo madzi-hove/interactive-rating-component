@@ -110,12 +110,17 @@ label {
 	margin: 1rem 0;
 }
 
+label:hover {
+	cursor: pointer;
+	background-color: var(--orange);
+}
+
 .number {
 	margin-right: 1.5rem;
 }
 
 .rating--checked {
-	background-color: var(--orange);
+	background-color: var(--light-grey);
 }
 /* button styles */
 
@@ -161,6 +166,7 @@ footer {
 	grid-area: footer;
 }
 .attribution {
+	color: var(--white);
 	font-size: 1.1rem;
 	text-align: center;
 }
