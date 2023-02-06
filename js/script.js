@@ -32,28 +32,34 @@ function invalidMessage() {
 	}, 1000);
 }
 
-// Add event listener to form and use bubbling to caputre event
-form.addEventListener("click", (e) => {
-	if (e.target.type === "radio") {
-		removeActiveState();
-		e.target.parentNode.classList.add("rating--checked");
-		formData = new FormData(form);
-	}
+window.addEventListener("load", () => {
+	const inputsArray = [...inputs];
+	inputsArray.forEach((input) => {
+		input.checked = false;
+	});
 
-	if (e.target.type === "submit") {
-		const inputsArray = [...inputs];
-		notChecked = checkForInput(inputsArray);
-		if (notChecked === true) {
-			e.preventDefault();
-			invalidMessage();
+	// Add event listener to form and use bubbling to caputre event
+	form.addEventListener("click", (e) => {
+		if (e.target.type === "radio") {
+			removeActiveState();
+			e.target.parentNode.classList.add("rating--checked");
 		}
-	}
-});
 
-form.addEventListener("submit", (e) => {
-	ratingSection.classList.add("rating--hidden");
-	thankYouSection.classList.remove("thank-you--hidden");
-	rating.innerText = formData.get("rating");
-	e.preventDefault();
-	console.log(Number(formData.get("rating")));
+		if (e.target.type === "submit") {
+			notChecked = checkForInput(inputsArray);
+			if (notChecked === true) {
+				e.preventDefault();
+				invalidMessage();
+			}
+		}
+	});
+
+	form.addEventListener("submit", (e) => {
+		ratingSection.classList.add("rating--hidden");
+		thankYouSection.classList.remove("thank-you--hidden");
+		formData = new FormData(form);
+		rating.innerText = formData.get("rating");
+		e.preventDefault();
+		console.log(Number(formData.get("rating")));
+	});
 });
