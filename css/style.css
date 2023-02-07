@@ -69,19 +69,21 @@ main {
 
 .rating__heading {
 	color: var(--white);
+	font-size: 3.2rem;
 	font-weight: 500;
-	margin-top: 2.5rem;
 }
 
 /* form styles */
 
 .rating-form {
 	position: relative;
+	margin-top: 3.5rem;
 }
 
 .form__ratings {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 2rem;
 }
 
 .invalid.form__ratings::before {
