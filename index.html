@@ -23,15 +23,16 @@
     <section class="rating">
       <div class="rating__image-container"><img class="rating__image" src="images/icon-star.svg" alt="star">
       </div>
-      <h1 class="rating__heading">How did we do?</h1>
-      <p class="rating__text">
-        Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!
-      </p>
-      <form novalidate action="#" class="rating-form">
+      <form autocomplete="off" class="rating-form">
+        <legend class="rating__heading">How did we do?</legend>
+        <p class="rating__text">
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
         <div class="form__ratings">
 
-          <label for="one"><input type="radio" name="rating" value="1" id="one"><span class="number">1</span></label>
+          <label for="one"><input type="radio" name="rating" value="1" id="one" required><span
+              class="number">1</span></label>
 
 
           <label for="two"><input type="radio" name="rating" value="2" id="two"><span class="number">2</span></label>
