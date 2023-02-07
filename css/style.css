@@ -86,17 +86,6 @@ main {
 	margin-bottom: 2rem;
 }
 
-.invalid.form__ratings::before {
-	position: absolute;
-	content: "Please select a number!";
-	right: 0;
-	top: -2.5rem;
-	color: var(--white);
-	background-color: var(--orange);
-	padding: 0.5rem 1rem;
-	border-radius: 15px;
-}
-
 [type="radio"] {
 	opacity: 0;
 }
